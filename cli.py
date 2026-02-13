@@ -10,7 +10,11 @@ def main():
     print("3) Data Exfiltration Staging")
     print("4) Exit\n")
 
-    choice = int(input("Enter choice (1-4): "))
+    try:
+        choice = int(input("Enter choice (1-4): "))
+    except ValueError:
+        print("Invalid input. Please choose a number.")
+        return
 
     if choice < 1 or choice > 4:
         print("Not a valid input range.")
